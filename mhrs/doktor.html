@@ -1,0 +1,801 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Index e-Nabız </title>
+    <link href="css/roboto-font.css" rel="stylesheet" />
+    <link href="css/roboto-Condensed-font.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/simple-line-icons.min.css" rel="stylesheet" />
+    <link href="css/font-sb.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/datatables.min.css" rel="stylesheet" />
+    <link href="css/datatables.bootstrap.css" rel="stylesheet" />
+
+    <link href="css/morris.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/fullcalendar.css" rel="stylesheet" />
+
+    <link href="css/toastr.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/components-md.min.css?vs1.1" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="css/plugins-md.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/eNabizMain.css?vs3.1.0" rel="stylesheet" />
+
+    <link href="css/profile.min.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+
+
+
+    <!--takvimin yolları-->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+
+    <script>
+        if (window.location != window.parent.location) top.location.href = self.location;
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-59467741-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white page-md ">
+    <div id="PageLoadGif">
+        <div class="LoadingDiv">
+            <!--<img src="/images/loading.gif" />-->
+        </div>
+    </div>
+    <div class="page-wrapper">
+
+        <div class="page-header navbar">
+            <div class="page-header-inner ">
+                <div class="page-logo">
+                    <a>
+                        <img src="/images/doctor.png" width="80" height="80" alt="e-nabız logo" style="margin-top:0px;"/>
+                    </a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li id="home-link" style="border-right: 0;">
+                        <a href="#Anasayfa" class="home-link border-right-0" style="margin-top: 18px;">
+                         
+                        </a>
+                    </li>
+                </ul>
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right margin-right-0">
+
+                        <li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
+                            <a href="#Çıkış" class="dropdown-toggle" style="margin-top: 10px;" onclick="PageLoadGif('show');">
+                                <i class="sb-uyari-s" style="font-size: 32px;"></i>
+                            </a>
+
+
+                        </li>
+                        <li class="dropdown dropdown-user ">
+                            <!--<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="margin-top: 4px;" data-onclick="PageLoadGif('show');">
+                                <img alt="" class="img-circle" src="/images/nullFoto.jpg" /><i class="fa fa-angle-down" style="margin:25px -10px 0;"></i>
+                            </a>-->
+                            <ul class="dropdown-menu mega-dropdown-menu row">
+                                <li>
+                                    <div class="profile-sidebar  light">
+                                        <div class="profile-userpic">
+                                            <!--<img src="/images/nullFoto.jpg" class="img-responsive" alt="">-->
+                                        </div>
+                                        <div class="profile-usertitle">
+                                            <span class="username username-hide-on-mobile bold"> G&#xDC;LSEV&#x130;M G&#xDC;LA&#xC7;TI </span>
+                                        </div>
+
+                                        <div class="profile-usermenu">
+                                            <ul class="nav">
+                                                <li>
+                                                    <a href="/Profil/Index" onclick="PageLoadGif('show');">
+                                                        <i class="sb sb-kimlik-karti-2"></i> Profil Düzenle
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Yardim/HataBildir" onclick="PageLoadGif('show');">
+                                                        <i class="sb-mesaj-s"></i> Şikayet Bildir
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Account/Logout" onclick="PageLoadGif('show');">
+                                                        <i class="sb sb-oturum-kapat"></i> Güvenli Çıkış
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="border-right-0">
+                            <a href="/Home/Index" style="margin-top:-2px;">
+                                <!--<img src="/images/sb-logo.png" style="width:56px" />-->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+        <div class="page-container">
+            <div class="page-sidebar-wrapper">
+                <div class="page-sidebar navbar-collapse collapse">
+                    <ul class="page-sidebar-menu  page-header-fixed IntroLeftMenu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+                        <li id="menu-toggle" class="nav-item">
+                            <a href="javascript:void(0);" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://medeczane.sgk.gov.tr/hekim/login.faces" class="nav-link " onclick="PageLoadGif('show');">
+                                <i class="sb-hastane-s-2"></i>
+                                <span class="title">Medula</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+
+                            <a href="/HastaBilgileri/Receteler" class="nav-link " onclick="PageLoadGif('show');">
+                                <i class="sb-recete-s"></i>
+                                <span class="title">Reçetelerim</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="/HastaBilgileri/Raporlar" class="nav-link  " onclick="PageLoadGif('show');">
+                                <i class="sb-rapor-s"></i>
+                                <span class="title">Raporlarım</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="/HastaBilgileri/Hastalik" class="nav-link  " onclick="PageLoadGif('show');">
+                                <i class="sb-hasta"></i>
+                                <span class="title">Hastalıklarım</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="/HastaBilgileri/Tahliller" class="nav-link  " onclick="PageLoadGif('show');">
+                                <i class="sb-tahlil-s-3"></i>
+                                <span class="title">Tahlillerim</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="/Goruntulerim/Index" class="nav-link  " onclick="PageLoadGif('show');">
+                                <i class="sb-radyoloji"></i>
+                                <span class="title">Görüntülerim</span>
+                            </a>
+                        </li>
+                        <li class="heading">
+                            <h3 style="font-weight:600;color:#d9848a; margin-top:20px;">KEŞFET</h3>
+                        </li>
+                        <li class="nav-item  kesfet">
+                            <a href="/Alerjiler/Index" class="nav-link  " onclick="PageLoadGif('show');">
+                                <i class="sb-alerji-s"></i>
+                                <span class="title">Alerjilerim</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  kesfet">
+                            <a href="/AcilDurum/Index" class="nav-link  " onclick="PageLoadGif('show');">
+                                <i class="sb-cv-s"></i>
+                                <span class="title">Acil Durum Notlarım</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  kesfet">
+                            <a href="/Dokuman/Index" class="nav-link  " onclick="PageLoadGif('show');">
+                                <i class="sb-dokuman-s"></i>
+                                <span class="title">Dokümanlarım</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  kesfet">
+                            <a href="/AsiTakvimi/Index" class="nav-link  " onclick="PageLoadGif('show');">
+                                <i class="sb-igne-ilac"></i>
+                                <span class="title">Aşı Takvimi</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  kesfet">
+                            <a href="/HastaBilgileri/Ilaclar" class="nav-link  " onclick="PageLoadGif('show');">
+                                <i class="sb-ilac"></i>
+                                <span class="title">İlaçlarım</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  kesfet">
+                            <a href="/Paylasimlar/Index" class="nav-link  " onclick="PageLoadGif('show');">
+                                <i class="sb-paylasim"></i>
+                                <span class="title">Paylaşım</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  kesfet">
+                            <a href="/Randevular/Index" class="nav-link active " onclick="PageLoadGif('show');">
+                                <i class="sb-takvim"></i>
+                                <span class="title">Randevu</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  kesfet">
+                            <a href="/Yardim/HataBildir" class="nav-link " onclick="PageLoadGif('show');">
+                                <i class="sb-mesaj-s"></i>
+                                <span class="title">Şikayet Bildir</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-content-wrapper">
+                <div class="page-content">
+
+                    <style>
+                        .dataTables_filter {
+                            top: -77px !important;
+                        }
+
+                        .dataTables_empty {
+                            display: none;
+                        }
+                    </style>
+                    <div class="col-md-6">
+                        <div class="portlet light">
+                            <div class="portlet-title">
+                                <div class="caption font-dark">
+                                    <span class="caption-subject bold uppercase">RANDEVU LİSTESİ</span>
+                                </div>
+                                <div class="actions">
+
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <table class='table table-hover' id='RandevuListe'>
+                                    <thead>
+                                        <tr>
+                                            <th>Tarih/Saat</th>
+                                            <th>Hastane</th>
+                                            <th>Birim</th>
+                                            <th>Doktor</th>
+                                            <th>Durum</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id='RandevuListeData'></tbody>
+                                </table>
+                                <div class="clearfix"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portlet light">
+                            <div class="portlet-title">
+                                <div class="caption font-dark">
+                                    <span class="caption-subject bold uppercase">RANDEVU TAKVİMİ</span>
+                                </div>
+                                <div class="actions">
+                                    <a data-target="#-kisiler" onclick="Kisiler();" data-toggle="modal" class="btn btn-circle btn-primary"><i class="fa fa-calendar-check-o"></i>Randevu Al</a>
+                                </div>
+                            </div>
+                            <div class="portlet-body Randevu">
+                                <div id="calendar"> </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="RandevuDetay" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicons glyphicons-remove"></span><span style="padding-left: 4px;">Kapat</span></button>
+                            <h4 class="modal-title">Randevu Detay</h4>
+                        </div>
+                        <div class="modal-body">
+                            <input type="hidden" id="iKurumKodu" />
+                            <input type="hidden" id="iRandevuNo" />
+                            <div class="randevu-info-box">
+                                <p id="pTarih"></p>
+                                <h3 id="hHastane"></h3>
+                            </div>
+                            <div class="randevu-info-box">
+                                <p id="pBrans"></p>
+
+                                <h3 id="hDoktor"></h3>
+                            </div>
+                            <div class="randevu-info-box ">
+                                <p>Durum</p>
+                                <h3 id="hDurum"></h3>
+                            </div>
+                            <div class="randevu-info-box no-border">
+                                <input type="text" id="doktorNotu" placeholder="Yeni doktor notu ekle" class="form-control" />
+                                <br />
+                                <center> <a class="btn btn-circle btn-primary" href="javascript:DoktorNotuEkle();">Doktor Notu Kaydet</a></center>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="randevu-al" class="modal container fade" style="z-index:9999999;" tabindex="-1">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            <h4 class="modal-title">Randevu Al</h4>
+                        </div>
+                        <div class="modal-body">
+                            <iframe name="I1" id="iframe" width="100%" height="100%" style="visibility:visible;min-width:350px;min-height:600px;border:none;" src=""></iframe>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-outline dark">Kapat</button>
+                        </div>
+                    </div>
+                    <div id="randevu-kisiler" class="modal container fade" tabindex="-1">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            <h4 class="modal-title">Randevu Al</h4>
+                        </div>
+                        <div id="dvKisiler" class="modal-body">
+                            <table class="table " role="grid">
+                                <thead>
+                                    <tr>
+                                        <th class="sorting_disabled" rowspan="1" colspan="1">Randevu Alınacak Kişi</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="padding-left: 18px;">Kendim icin randevu al   </td>
+                                        <td><a data-target="#randevu-al" onclick="linkAl(0==0?477166:0);" data-toggle="modal" class="btn btn-circle btn-primary btn-sm"><i class="fa fa-calendar-check-o"></i>Randevu Al / İptal Et</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left: 18px;">NURAY A&#x15E;IR</td>
+                                        <td><a data-target="#randevu-al" onclick="linkAl(0!=0?0:50371471862);" data-toggle="modal" class="btn btn-circle btn-primary btn-sm"><i class="fa fa-calendar-check-o"></i>Randevu Al / İptal Et</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left: 18px;">OSMAN G&#xDC;LA&#xC7;TI</td>
+                                        <td><a data-target="#randevu-al" onclick="linkAl(0!=0?0:50374471708);" data-toggle="modal" class="btn btn-circle btn-primary btn-sm"><i class="fa fa-calendar-check-o"></i>Randevu Al / İptal Et</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BuJsgYQ9IVAiyU2aRtN0kIuptCjIdpsUFWrwO1h-n9fXWOoKL2fxUNZVyJ-tYRiI5ZT-nStF6lWLGKX6PVQgHaWp6CFsNBNSLdJ3JYSdCy2lRz8QUBGjS_Nri4Hlv0xtfzQqXc6BJ2ibraBGVZlC5o" />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-outline blue">Kapat</button>
+                        </div>
+                    </div>
+
+
+
+                    <script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var initialLangCode = 'tr';
+
+
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'today,prev,next',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            lang: initialLangCode,
+            buttonIcons: true, // show the prev/next text
+            weekNumbers: false,
+            editable: false,
+            eventLimit: false, // allow "more" link when too many events
+
+            eventClick: function (calEvent, jsEvent, view) {
+                RandevuDetay(calEvent);
+            }
+        });
+
+        // build the language selector's options
+        $.each($.fullCalendar.langs, function (langCode) {
+            $('#lang-selector').append(
+                $('<option/>')
+                    .attr('value', langCode)
+                    .prop('selected', langCode == initialLangCode)
+                    .text(langCode)
+            );
+        });
+
+        // when the selected option changes, dynamically change the calendar option
+        $('#lang-selector').on('change', function () {
+            if (this.value) {
+                $('#calendar').fullCalendar('option', 'lang', this.value);
+            }
+        });
+
+        $(".fc-right").css('display', 'none');
+        randevular();
+
+        jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+            "date-euro-pre": function (a) {
+                var x;
+
+                if ($.trim(a) !== '') {
+                    var frDatea = $.trim(a).split(' ');
+                    var frTimea = (undefined != frDatea[1]) ? frDatea[1].split(':') : [00, 00, 00];
+                    var frDatea2 = frDatea[0].split('.');
+                    x = (frDatea2[2] + frDatea2[1] + frDatea2[0] + frTimea[0] + frTimea[1] + ((undefined != frTimea[2]) ? frTimea[2] : 0)) * 1;
+                }
+                else {
+                    x = Infinity;
+                }
+
+                return x;
+            },
+
+            "date-euro-asc": function (a, b) {
+                return a - b;
+            },
+
+            "date-euro-desc": function (a, b) {
+                return b - a;
+            }
+        });
+        $('#yetkiGrubu').DataTable({
+            "responsive": true,
+            "dom": 'rt<"bottom"flp><"clear">',
+            "pagingType": "full_numbers",
+            "language": {
+                "url": "/plugins/datatable/js/i18n/Turkish.json"
+            },
+        });
+    });
+    function linkAl(id) {
+        $.ajax({
+            data: { ID: id },
+            url: "/Randevular/RandevuAl",
+    /**/
+    type: "GET",
+    success: function (data) {
+        $("#iframe").attr('src', data);
+
+    }
+});
+}
+    function randevular() {
+        var rDurum = "";
+$.ajax({
+    /**/
+    url: "/Randevular/Randevular",
+    /**/
+    type: "GET",
+    success: function (data) {
+        var veri = JSON.parse(data);
+        var renk = "";
+        for (var i = 0; i < veri.length; i++) {
+            var x = veri[i].tarih.split('.');
+            var y = x[2].split(' ')[0] + '-' + x[1] + '-' + x[0] + 'T' + x[2].split(' ')[1];
+            if (veri[i].kayitDurumu=="1") {
+                if (veri[i].durum == "1") {
+                    rDurum = "<b style='color:blue'>Randevu gerçekleşti</b>";
+                    renk = "blue";
+                }
+                else if (veri[i].durum == "2") {
+                    renk = "red";
+                    rDurum = "<b style='color:red'>Randevu gerçekleşmedi</b>";
+                }
+                else {
+                    renk = "green";
+                    rDurum = "<b style='color:green'>Bekleyen randevu</b>";
+                }
+            }
+            else {
+                renk = "red";
+                rDurum = "<b style='color:red'>İptal edildi</b>";
+            }
+
+
+
+            var event =
+                {
+                    durum: '' + veri[i].durum + '',
+                    kayitDurumu: '' + veri[i].kayitDurumu+'',
+                    doktor: '' + veri[i].doktor + '',
+                    hastane: '' + veri[i].hastane + '',
+                    title: '' + veri[i].brans + '',
+                    start: '' + y + '',
+                    tarih: '' + veri[i].tarih + '',
+                    kurumKodu: '' + veri[i].kurumKodu + '',
+                    RandevuHrn: '' + veri[i].randevuHrn + '',
+                    color:renk
+                };
+            $('#calendar').fullCalendar('renderEvent', event, true);
+
+            if (veri[i].durum=="3") {
+                $("#RandevuListeData").append('<tr>\
+                                <td>'+ veri[i].tarih + '</td>\
+                                <td>'+ veri[i].hastane + '</td>\
+                                <td>'+ veri[i].brans + '</td>\
+                                <td>'+ veri[i].doktor + '</td>\
+                                <td>'+ rDurum + '</td>\
+                                <td><a class="btn btn-xs btn-danger" href="javascript:RandevuIptal(\'' + veri[i].randevuHrn + '\');">İptal Et</a></td>\
+                            </tr>');
+            }
+            else {
+                $("#RandevuListeData").append('<tr>\
+                                <td>'+ veri[i].tarih + '</td>\
+                                <td>'+ veri[i].hastane + '</td>\
+                                <td>'+ veri[i].brans + '</td>\
+                                <td>'+ veri[i].doktor + '</td>\
+                                <td>'+ rDurum + '</td>\
+                                <td></td>\
+                            </tr>');
+            }
+
+        }
+
+
+
+        $('#RandevuListe').DataTable({
+            columnDefs: [
+                { type: 'date-euro', targets: 0 }
+            ],
+            "order": [[0, 'desc']],
+            "responsive": true,
+            "dom": 'rt<"bottom"flp><"clear">',
+            "pagingType": "full_numbers",
+            "language": {
+                "url": "/plugins/datatable/js/i18n/Turkish.json"
+            },
+        });
+
+    }
+});
+    }
+
+function RandevuDetay(veri) {
+$('#pTarih').html('Tarih: ' + veri.tarih);
+$('#hHastane').html(veri.hastane);
+$('#pBrans').html(veri.title);
+$('#hDoktor').html(veri.doktor);
+$('#iKurumKodu').val(veri.kurumKodu);
+    $('#iRandevuNo').val(veri.RandevuHrn);
+    if (veri.kayitDurumu=="1") {
+        if (veri.durum === "1") {
+            $('#hDurum').html("Randevu gerçekleşti");
+        }
+        else if (veri.durum === "2") {
+            $('#hDurum').html("Randevu gerçekleşmedi");
+        }
+        else if (veri.durum === "3") {
+            $('#hDurum').html("Bekleyen randevu");
+        }
+    }
+    else {
+        $('#hDurum').html("İptal edildi");
+    }
+
+$("#RandevuDetay").modal("show");
+    }
+
+function Kisiler() {
+
+}
+function DoktorNotuEkle() {
+var kod = $("#iKurumKodu").val();
+var no = $("#iRandevuNo").val();
+var yazi = $("#doktorNotu").val();
+$.ajax({
+    /**/
+    url: "/Randevular/DoktorNotuEkle",
+    /**/
+    data: { kurumKodu: kod, randevuNo: no, not: yazi },
+    beforeSend: function (xhr) {
+        xhr.setRequestHeader("XSRF-TOKEN",
+            $('input:hidden[name="__RequestVerificationToken"]').val());
+    },
+    type: "POST",
+    success: function (data) {
+        $("#doktorNotu").val('');
+        $("#RandevuDetay").modal("toggle");
+        if (data == true) {
+            toastr.success("İşleminiz başarıyla gerçekleşti.");
+        }
+        else {
+            toastr.info("İşleminiz gerçekleştirilemedi.");
+        }
+
+    }
+});
+    }
+
+    function RandevuIptal(no) {
+        $.ajax({
+    url: "/Randevular/RandeuvIptal",
+    data: { randevuNo: no },
+    beforeSend: function (xhr) {
+        xhr.setRequestHeader("XSRF-TOKEN",
+            $('input:hidden[name="__RequestVerificationToken"]').val());
+    },
+    type: "POST",
+    success: function (data) {
+        if (data == "True") {
+            toastr.success("Randevu iptal edildi.");
+        }
+        else {
+            toastr.info("İşlem Başarısız.");
+        }
+         window.location.href='/Randevular';
+    }
+});
+    }
+                    </script>
+
+
+                    <script>
+        $(document).ready(function () {
+            $("#randevu-kisiler").modal("show");
+        });
+                    </script>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+
+    <script src="bootstrap.min.js" type="text/javascript"></script>
+
+    <script src="bootstrap-datepicker.min.js"></script>
+    <script src="bootstrap-timepicker.js"></script>
+
+    <script src="js.cookie.min.js" type="text/javascript"></script>
+    <script src="jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="bootstrap-switch.min.js" type="text/javascript"></script>
+
+    <script src="select2.full.min.js" type="text/javascript"></script>
+    <script src="moment.min.js" type="text/javascript"></script>
+    <script src="morris.min.js" type="text/javascript"></script>
+    <script src="raphael-min.js" type="text/javascript"></script>
+    <script src="fullcalendar.js"></script>
+    <script src="tr.js"></script>
+    <script src="horizontal-timeline.js" type="text/javascript"></script>
+    <script src="toastr.min.js" type="text/javascript"></script>
+    <script src="jquery.dataTables.min.js"></script>
+    <script src="datatables.bootstrap.js"></script>
+    <script src="dataTables.responsive.min.js"></script>
+    <link href="responsive.bootstrap.min.css" rel="stylesheet" />
+    <script src="bootstrap-tabdrop.js"></script>
+    <script type="text/javascript">
+            if ($(".modal").length) {
+                $('head').append('<link rel="stylesheet" href="/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css" type="text/css" />');
+                $('head').append('<link rel="stylesheet" href="/plugins/bootstrap-modal/css/bootstrap-modal.css" type="text/css" />');
+                jQuery.getScript("/plugins/bootstrap-modal/js/bootstrap-modalmanager.js");
+                jQuery.getScript("/plugins/bootstrap-modal/js/bootstrap-modal.js");
+            }
+    </script>
+    <script src="js/app.min.js" type="text/javascript"></script>
+    <script src="js/components-select2.min.js" type="text/javascript"></script>
+    <script src="js/ui-toastr.min.js" type="text/javascript"></script>
+    <script src="js/dashboard.min.js" type="text/javascript"></script>
+    <script src="js/layout.min.js" type="text/javascript"></script>
+    <script src="js/demo.min.js" type="text/javascript"></script>
+    <script src="js/quick-sidebar.min.js" type="text/javascript"></script>
+    <script src="js/quick-nav.min.js" type="text/javascript"></script>
+    <script src="js/USSmain.js"></script>
+    <script src="js/parsley.js"></script>
+
+    <script type="text/javascript">
+            $(document).ready(function () {
+                $('.date-picker').datepicker({
+                    format: 'dd-mm-yyyy',
+                    language: "tr",
+                    autoclose: true,
+                    weekStart: 1
+                });
+                jQuery(document).on('click', '.dropdown-user', function (e) {
+                    e.stopPropagation()
+                });
+                     // responsive ayarları
+                $(document).ready(function () {
+
+                    var $window = $(window);
+                    var $pane = $('.page-sidebar-menu');
+
+                    function checkWidth() {
+                        var windowsize = $window.width();
+                        //if (windowsize >= 999 && windowsize <= 1366) {
+                        if (windowsize <= 1366) {
+
+                            $pane.addClass("page-sidebar-menu-closed");
+                            $('body').addClass('page-sidebar-closed-hide-logo page-sidebar-closed');
+                        } else {
+                            $pane.removeClass("page-sidebar-menu-closed");
+                            $('body').removeClass('page-sidebar-closed-hide-logo page-sidebar-closed');
+                        }
+                    }
+                    // Execute on load
+                    checkWidth();
+                    // Bind event listener
+                    $(window).resize(checkWidth);
+
+                });
+
+                //CocukVarMi();
+                $('[data-toggle="tooltip"]').tooltip();
+                $('[data-toggle="popover"]').popover();
+            });
+             function CocukVarMi() {
+            $.ajax({
+                url: "/Cocuklar/CocukKontrol",
+                type: "GET",
+                success: function (data) {
+                    if (data != "") {
+                        $("#menuCocuklar").css("display", "block");
+                    }
+
+                }
+                });
+            }
+             function GetFormattedDateDB(tarih) {
+                 if (tarih === null)
+                     return "-";
+
+                 var time = new Date(tarih)
+                 time.toUTCString()
+                 var month = time.getUTCMonth() + 1;
+                 var day = time.getUTCDate();
+                 var year = time.getUTCFullYear();
+                 var hour = time.getUTCHours();
+                 var min = (time.getUTCMinutes() < 10 ? '0' : '') + time.getUTCMinutes();
+                 return day + "." + month + "." + year + " " + hour + ":" + min;
+             }
+
+             function GetFormattedDate(tarih) {
+                 if (tarih === null)
+                     return "-";
+
+                 var time = new Date(tarih)
+                 var month = time.getMonth() + 1;
+                 var day = time.getDate();
+                 var year = time.getFullYear();
+                 var hour = time.getHours();
+                 var min = (time.getMinutes() < 10 ? '0' : '') + time.getMinutes();
+                 return day + "." + month + "." + year + " " + hour + ":" + min;
+             }
+            function CocukKontrol(id) {
+          $.ajax({
+           url: '/Home/CocukOnayiVarMi',
+            type: 'GET',
+            data: {"kimlikBilgileriId":id},
+           success: function (data) {
+               if (data==="True") {
+                   CocukGiris(id);
+               }
+               else {
+                   toastr.info("Çocuğunuzu görebilmeniz için diğer ebeveyninin onayı gerekmektedir.Diğer ebeveyn kendi e-Nabız hesabından giriş yaparak Paylaşım ekranından onay vermesi gerekiyor.");
+               }
+        }, error: function () {
+               alert("hata");
+        }
+        });
+             }
+            function CocukGiris(id) {
+                window.location.href = '/Home/CocuklarimGiris?KimlikBilgileriId=' + id;
+            }
+
+    </script>
+
+
+
+
+
+</body>
+</html>
